@@ -20,7 +20,8 @@ import '@/styles/protofox-theme.css';
 // EndOS animation control
 const useEndOSAnimation = () => {
   const [bootComplete, setBootComplete] = useState(false);
-  const [skipBoot, setSkipBoot] = useState(() => {
+  // Using underscore prefix to indicate intentionally unused variable
+  const [skipBoot, _setSkipBoot] = useState(() => {
     // Check for URL parameter that allows skipping the boot animation
     const urlParams = new URLSearchParams(window.location.search);
     const skipParam = urlParams.get('skipBoot');
@@ -44,10 +45,11 @@ const useEndOSAnimation = () => {
 const AuthChecker = ({ children }: { children: React.ReactNode }) => {
   const auth = useAuth();
   const [isStatusVisible, setIsStatusVisible] = useState(false);
-  const [showNotification, setShowNotification] = useState(false);
-  const [notificationType, setNotificationType] = useState<'switch' | 'warning' | 'notice'>('switch');
-  const [notificationMessage, setNotificationMessage] = useState('');
-  const [selectedAlter, setSelectedAlter] = useState('');
+  // Using underscore prefix for all unused state variables
+  const [_showNotification, setShowNotification] = useState(false);
+  const [_notificationType, setNotificationType] = useState<'switch' | 'warning' | 'notice'>('switch');
+  const [_notificationMessage, setNotificationMessage] = useState('');
+  const [_selectedAlter, setSelectedAlter] = useState('');
 
   // Toggle system status floating panel
   const toggleStatus = () => {
@@ -125,7 +127,7 @@ const AuthChecker = ({ children }: { children: React.ReactNode }) => {
 
 const App = () => {
     const [isGameActive, setIsGameActive] = useState(false);
-    const [showInitialSwitchDemo, setShowInitialSwitchDemo] = useState(false);
+    const [_showInitialSwitchDemo, setShowInitialSwitchDemo] = useState(false);
     const { bootComplete, skipBoot, handleBootComplete } = useEndOSAnimation();
 
     // Demo the switch notification after a delay

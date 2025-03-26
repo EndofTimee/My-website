@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '@/styles/EndOSBootAnimation.css';
 
 interface EndOSBootAnimationProps {
-  customLogo?: string;
-  customColors?: {
+  // Using underscores to mark unused props to avoid TypeScript errors
+  _customLogo?: string;
+  _customColors?: {
     primary?: string;
     secondary?: string;
     fox?: string;
@@ -15,8 +16,9 @@ interface EndOSBootAnimationProps {
 const EndOSBootAnimation: React.FC<EndOSBootAnimationProps> = ({ 
   onComplete, 
   skipAnimation = false,
-  customLogo,
-  customColors
+  // Rename with underscores to indicate variables are intentionally unused
+  _customLogo,
+  _customColors
 }) => {
   const [active, setActive] = useState(true);
   const [bootStage, setBootStage] = useState(0);
@@ -174,7 +176,7 @@ const EndOSBootAnimation: React.FC<EndOSBootAnimationProps> = ({
               <div className="fox-header">ACTIVATING FOX PROTOCOLS</div>
               <div className="fox-trait">Fluffy tail module: Online</div>
               <div className="fox-trait">Fox ears: Calibrated</div>
-              <div className="fox-trait">Cuteness factor: Minimal</div>
+              <div className="fox-trait">Cuteness factor: Maximum</div>
               <div className="fox-trait">Mischief subroutines: Loaded</div>
               <div className="fox-trait">ProtoFox integration: Complete</div>
             </div>

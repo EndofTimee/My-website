@@ -19,4 +19,4 @@ port = 8787
 # Exclude files and directories from deployment
 [site]
 bucket = "./dist"  # Output directory
-exclude = [".unused/**/*"]  # Exclude .unused directory
+exclude = [".unused/*"]  # Exclude .unused directory

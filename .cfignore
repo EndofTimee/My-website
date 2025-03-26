@@ -1,2 +1,2 @@
 ﻿# Exclude the .unused directory from Cloudflare deployment
-.unused/
+.unused/*
