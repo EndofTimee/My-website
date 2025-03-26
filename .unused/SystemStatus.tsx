@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth, systemMembers } from '@/context/AuthContext';
 import FoxCard from '@/components/FoxCard';
 import { 
@@ -269,3 +269,5 @@ const SystemStatus = ({ minimal = false, className = '' }: SystemStatusProps) =>
 };
 
 export default SystemStatus;
+
+

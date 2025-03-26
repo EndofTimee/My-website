@@ -1,4 +1,4 @@
-﻿name = "personal-site"
+me = "personal-site"
 main = "src/worker/index.ts"
 compatibility_date = "2024-02-01"
 

@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RefreshCw, AlertCircle, X } from 'lucide-react';
 import { systemMembers } from '@/context/AuthContext';
 
@@ -23,7 +23,7 @@ const SwitchNotification = ({
 }: SwitchNotificationProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [progress, setProgress] = useState(100);
-  const [progressInterval, setProgressInterval] = useState<NodeJS.Timeout | null>(null);
+  const [progressInterval, setProgressInterval] = useState<any | null>(null); // Using any instead of NodeJS.Timeout
 
   // Random alter selection if none provided
   const [selectedAlter, setSelectedAlter] = useState(alterName);
@@ -170,3 +170,5 @@ const SwitchNotification = ({
 };
 
 export default SwitchNotification;
+
+

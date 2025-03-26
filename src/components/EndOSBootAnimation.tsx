@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '@/styles/EndOSBootAnimation.css';
 interface EndOSBootAnimationProps {
+  customLogo?: string;
+  _customColors?: {
+    primary?: string;
+    secondary?: string;
+    fox?: string;
+  };
   onComplete?: () => void;
   skipAnimation?: boolean;
-  customLogo?: string;
-  customColors?: {
+  _customLogo?: string;
+  __customColors?: {
     primary?: string;
     secondary?: string;
     fox?: string;
@@ -14,8 +20,8 @@ interface EndOSBootAnimationProps {
 const EndOSBootAnimation: React.FC<EndOSBootAnimationProps> = ({ 
   onComplete, 
   skipAnimation = false,
-  customLogo,
-  customColors
+  _customLogo,
+  _customColors
 }) => {
   const [active, setActive] = useState(true);
   const [bootStage, setBootStage] = useState(0);
@@ -41,7 +47,7 @@ const EndOSBootAnimation: React.FC<EndOSBootAnimationProps> = ({
       { stage: 8, delay: 1000 }   // Fade out
     ];
     
-    let timeout: NodeJS.Timeout;
+    let timeout: any; // Using any instead of NodeJS.Timeout
     let currentIndex = 0;
     
     const runNextStage = () => {
@@ -210,3 +216,5 @@ const EndOSBootAnimation: React.FC<EndOSBootAnimationProps> = ({
 };
 
 export default EndOSBootAnimation;
+
+
