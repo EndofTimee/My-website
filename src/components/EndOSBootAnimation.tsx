@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '@/styles/EndOSBootAnimation.css';
-
 interface EndOSBootAnimationProps {
   onComplete?: () => void;
   skipAnimation?: boolean;

@@ -5,11 +5,11 @@ import Navbar from "@/components/Navbar";
 import AboutPage from "@/pages/AboutPage";
 import ProjectsPage from "@/pages/ProjectsPage";
 import APCSPPage from "@/pages/APCSPPage";
-import LoginPage from "@/pages/LoginPage";
-import SystemPage from "@/pages/SystemPage";
+// import LoginPage from "@/pages/LoginPage";
+// import SystemPage from "@/pages/SystemPage";
 import VNCViewer from "@/components/VNCViewer";
-import SystemStatus from "@/components/SystemStatus";
-import SwitchNotification from "@/components/SwitchNotification";
+// import SystemStatus from "@/components/SystemStatus";
+// import SwitchNotification from "@/components/SwitchNotification";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import FoxGame from "@/games/fox-adventure/components/FoxGame";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -101,14 +101,14 @@ const AuthChecker = ({ children }: { children: React.ReactNode }) => {
                 {isStatusVisible ? "Hide System Status" : "System Status"}
               </span>
             </div>
-            <SystemStatus 
+            {/* <SystemStatus 
               minimal={true} 
               className="shadow-lg rounded-t-none w-[300px] max-w-[calc(100vw-2rem)]" 
-            />
+            /> */}
           </div>
 
           {/* System Notifications */}
-          <SwitchNotification 
+          {/* <SwitchNotification 
             show={showNotification}
             onClose={() => setShowNotification(false)}
             alterName={selectedAlter}
@@ -116,7 +116,7 @@ const AuthChecker = ({ children }: { children: React.ReactNode }) => {
             message={notificationMessage}
             autoClose
             autoCloseDelay={5000}
-          />
+          /> */}
         </>
       )}
     </>
@@ -218,7 +218,7 @@ const App = () => {
                                       <Route path="/projects" element={<ProjectsPage />} />
                                       <Route path="/apcsp" element={<APCSPPage />} />
                                       <Route path="/vnc" element={<VNCViewer />} />
-                                      <Route path="/login" element={<LoginPage />} />
+                                      {/* <Route path="/login" element={<LoginPage />} />
                                       <Route 
                                           path="/system" 
                                           element={
@@ -226,7 +226,7 @@ const App = () => {
                                                   <SystemPage />
                                               </ProtectedRoute>
                                           } 
-                                      />
+                                      /> */}
                                       <Route path="*" element={
                                           <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4">
                                               <h1 className="text-4xl font-bold text-glow">404: Page Not Found</h1>
@@ -248,15 +248,6 @@ const App = () => {
                               </footer>
                           </div>
 
-                          {/* Demo Switch Notification */}
-                          <SwitchNotification 
-                            show={showInitialSwitchDemo}
-                            onClose={() => setShowInitialSwitchDemo(false)}
-                            alterName="End"
-                            type="switch"
-                            autoClose
-                            autoCloseDelay={5000}
-                          />
 
                           {/* Fox Game Overlay - Activated by Konami Code */}
                           {isGameActive && (
