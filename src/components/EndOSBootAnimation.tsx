@@ -34,14 +34,14 @@ const EndOSBootAnimation: React.FC<EndOSBootAnimationProps> = ({
     
     // Initialize boot sequence with proper timing to prevent overlap
     const bootSequence = [
-      { stage: 1, delay: 500 },   // Initial screen flicker
-      { stage: 2, delay: 2000 },  // BIOS check (longer time to read)
-      { stage: 3, delay: 2500 },  // System scan (longer for progress bar)
-      { stage: 4, delay: 2500 },  // Loading modules (allow time for animation)
-      { stage: 5, delay: 2500 },  // Fox protocols (allow time to read traits)
-      { stage: 6, delay: 2000 },  // Show logo (allow time to appreciate)
-      { stage: 7, delay: 2000 },  // Final activation (longer read time)
-      { stage: 8, delay: 1000 }   // Fade out
+      { stage: 1, delay: 1500 },   // Initial screen flicker
+      { stage: 2, delay: 3000 },  // BIOS check (longer time to read)
+      { stage: 3, delay: 3500 },  // System scan (longer for progress bar)
+      { stage: 4, delay: 3500 },  // Loading modules (allow time for animation)
+      { stage: 5, delay: 3500 },  // Fox protocols (allow time to read traits)
+      { stage: 6, delay: 3000 },  // Show logo (allow time to appreciate)
+      { stage: 7, delay: 3000 },  // Final activation (longer read time)
+      { stage: 8, delay: 2000 }   // Fade out
     ];
     
     let timeout: any; // Using any instead of NodeJS.Timeout
@@ -176,7 +176,7 @@ const EndOSBootAnimation: React.FC<EndOSBootAnimationProps> = ({
               <div className="fox-header">ACTIVATING FOX PROTOCOLS</div>
               <div className="fox-trait">Fluffy tail module: Online</div>
               <div className="fox-trait">Fox ears: Calibrated</div>
-              <div className="fox-trait">Cuteness factor: Maximum</div>
+              <div className="fox-trait">Cuteness factor: Nonexistent</div>
               <div className="fox-trait">Mischief subroutines: Loaded</div>
               <div className="fox-trait">ProtoFox integration: Complete</div>
             </div>
