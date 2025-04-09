@@ -1,9 +1,9 @@
-me = "personal-site"
+name = "personal-site"
 main = "src/worker/index.ts"
 compatibility_date = "2024-02-01"
 
 [build]
-command = "npm run build"  # Changed from build:worker to build
+command = "npm run build:worker"
 
 [env.production]
 name = "personal-site"
@@ -15,8 +15,3 @@ vars = { ENVIRONMENT = "development" }
 
 [dev]
 port = 8787
-
-# Exclude files and directories from deployment
-[site]
-bucket = "./dist"  # Output directory
-exclude = [".unused/*"]  # Exclude .unused directory
